@@ -17,6 +17,7 @@ Quick Start
     File.expand_path(File.join(File.dirname(__FILE__), 'spec'))
 
   - jasmine_spec_dir
+
     File.expand_path(File.join(File.dirname(__FILE__), 'spec'))
 
 2. Add some more dir_mappings
@@ -27,6 +28,7 @@ Quick Start
 3. Get your spec_helper.js to be included in your
 
   - spec_file_urls
+
     ['/helpers/spec_helper.js'] + raw_spec_files.collect {|f| f.sub(jasmine_spec_dir, "/spec")}
 
 ### Create some supporting files
@@ -38,8 +40,7 @@ Quick Start
 
     jasmine.include('public/javascripts/jquery/jquery-1.3.2.js', true);
     jasmine.include('public/javascripts/some_implementation.js', true);
-
-    #if you want to make some custom matchers you can include them here as well
+    //if you want to make some custom matchers you can include them here as well
     jasmine.include('helpers/custom_matchers.js', true);
 
 ## Copy the Rakefile under examples/ruby into your lib/tasks/jasmine.rake
@@ -47,16 +48,14 @@ Quick Start
     cd RAILS_ROOT
     cp -p spec/javascript/jasmine/examples/ruby/RAKEFILE lib/tasks/jasmine.rake
 
-*NOTE: I changed the rake tasks from:
-  - test:ci to spec:jasmine
-  - jasmine_server to spec:jsamine_server*
+*NOTE: I changed the rake tasks from:*
+  - *test:ci to spec:jasmine*
+  - *jasmine_server to spec:jsamine_server*
 
-so now to run it in the browser I run
+So now to run it in the browser I run
 
     rake spec:jsamine_server
 
 and to run it via command-line (using selenium)
 
     rake spec:jasmine
-
-
