@@ -37,3 +37,9 @@ Quick Start
 
     #if you want to make some custom matchers you can include them here as well
     jasmine.include('helpers/custom_matchers.js', true);
+
+## Copy the Rakefile under examples/ruby into your lib/tasks/jasmine.rake
+    - I changed the rake tasks from:
+        test:ci to spec:jasmine
+        jasmine_server to spec:jsamine_server
+
